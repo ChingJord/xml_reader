@@ -1,0 +1,17 @@
+<header>
+
+  <h1>Redbubble</h1>
+
+  <nav>
+    <ul>
+      <li><a href="<%= root_path %>">Home<a></li>
+      <li><a href="<%= make_path(@make) %>"><%= @make %><a></li>
+    </ul>
+  </nav>
+
+</header>
+<section>
+  <% @model.each do |m| %>
+    <%= image_tag("#{m[0]}", :size => "135x135") %>
+  <% end %>
+</section>

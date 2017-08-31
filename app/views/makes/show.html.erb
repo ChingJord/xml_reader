@@ -1,0 +1,19 @@
+<header>
+
+  <h1>Redbubble</h1>
+
+  <nav>
+    <ul>
+      <li><a href="<%= root_path %>">Home</a></li>
+      <% @models.uniq.each do |model| %>
+        <li><a href="<%= model_path(model[0]) %>"><%= model[0] %><a></li>
+      <% end %>
+    </ul>
+  </nav>
+
+</header>
+<section>
+  <% @make[0,10].each do |m| %>
+    <%= image_tag("#{m[0]}", :size => "135x135") %>
+  <% end %>
+</section>
